@@ -2,9 +2,9 @@
 
 /* ── Tokens ──────────────────────────────────────────────────────────────── */
 :root {
-  --coral:         #FF6A4D;
-  --coral-dim:     rgba(255, 106, 77, 0.12);
-  --coral-glow:    rgba(255, 106, 77, 0.30);
+  --coral:         #F0426E;
+  --coral-dim:     rgba(240, 66, 110, 0.12);
+  --coral-glow:    rgba(240, 66, 110, 0.30);
   --green:         #18B07B;
   --green-dim:     rgba(24, 176, 123, 0.12);
   --green-glow:    rgba(24, 176, 123, 0.30);
@@ -13,7 +13,7 @@
   --surface-2:     #F4EEE6;
   --surface-3:     #ECE3D8;
   --border:        rgba(43, 32, 24, 0.08);
-  --border-accent: rgba(255, 106, 77, 0.30);
+  --border-accent: rgba(240, 66, 110, 0.30);
   --text-1:        #2B2018;
   --text-2:        #6B5D52;
   --text-3:        #9C8F84;
@@ -53,7 +53,7 @@ p  { color: var(--text-2); font-size: 1.05rem; }
 
 .highlight {
   color: var(--coral);
-  text-shadow: 0 0 28px rgba(255, 106, 77, 0.25);
+  text-shadow: 0 0 28px rgba(240, 66, 110, 0.25);
 }
 
 /* ── Layout ──────────────────────────────────────────────────────────────── */
@@ -88,7 +88,7 @@ section { padding: 7rem 0; }
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   font-family: var(--font);
   font-size: 0.95rem;
   font-weight: 700;
@@ -101,10 +101,10 @@ section { padding: 7rem 0; }
 .btn-primary {
   background: var(--coral);
   color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(255, 106, 77, 0.35);
+  box-shadow: 0 4px 16px rgba(240, 66, 110, 0.35);
 }
 .btn-primary:hover {
-  box-shadow: 0 6px 24px rgba(255, 106, 77, 0.45);
+  box-shadow: 0 6px 24px rgba(240, 66, 110, 0.45);
   transform: translateY(-2px);
 }
 
@@ -132,9 +132,7 @@ nav {
 }
 
 nav.scrolled {
-  background: rgba(250, 246, 241, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--bg);
   border-bottom-color: var(--border);
 }
 
@@ -220,26 +218,22 @@ nav.scrolled {
   text-align: center;
 }
 
-.hero-glow {
+.hero-blueprint {
   position: absolute;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(255, 106, 77, 0.10) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -8%;
+  right: -12%;
+  width: 62%;
+  max-width: 720px;
+  height: auto;
+  opacity: 0.55;
   pointer-events: none;
 }
 
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(43,32,24,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(43,32,24,0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
-  pointer-events: none;
+.hero-blueprint path,
+.hero-blueprint circle,
+.hero-blueprint rect {
+  stroke: var(--text-1);
+  stroke-opacity: 0.08;
 }
 
 .hero-content {
@@ -254,9 +248,8 @@ nav.scrolled {
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   padding: 0.4rem 1rem;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border-accent);
   background: var(--coral-dim);
   font-size: 0.8rem;
@@ -264,20 +257,7 @@ nav.scrolled {
   color: var(--coral);
   font-family: var(--mono);
   letter-spacing: 0.05em;
-}
-
-.badge-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--coral);
-  border-radius: 50%;
-  box-shadow: 0 0 6px rgba(255, 106, 77, 0.6);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.5; transform: scale(0.8); }
+  transform: rotate(-2deg);
 }
 
 .hero h1 { max-width: 800px; }
@@ -359,10 +339,10 @@ nav.scrolled {
 
 .product-card.flagship {
   border-color: var(--border-accent);
-  background: linear-gradient(135deg, rgba(255, 106, 77, 0.05) 0%, rgba(255,255,255,0) 60%);
+  background: linear-gradient(135deg, rgba(240, 66, 110, 0.05) 0%, rgba(255,255,255,0) 60%);
 }
 
-.product-card.flagship:hover { border-color: rgba(255, 106, 77, 0.45); }
+.product-card.flagship:hover { border-color: rgba(240, 66, 110, 0.45); }
 
 .product-card.coming-soon {
   background: var(--surface-2);
@@ -382,11 +362,9 @@ nav.scrolled {
 
 .product-card-glow {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 106, 77, 0.08) 0%, transparent 70%);
-  bottom: -80px;
-  right: -80px;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--coral), var(--green));
   pointer-events: none;
 }
 
@@ -422,7 +400,7 @@ nav.scrolled {
   background: var(--coral-dim);
   border: 1px solid var(--border-accent);
   padding: 0.2rem 0.6rem;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
 }
 
 .product-status {
@@ -444,6 +422,11 @@ nav.scrolled {
   animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
 .product-desc { font-size: 0.95rem; flex: 1; }
 
 .product-features {
@@ -458,7 +441,7 @@ nav.scrolled {
   color: var(--text-2);
   background: var(--surface-3);
   border: 1px solid var(--border);
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   padding: 0.25rem 0.7rem;
 }
 
@@ -474,7 +457,7 @@ nav.scrolled {
   background: var(--green-dim);
   border: 1px solid rgba(24, 176, 123, 0.25);
   padding: 0.4rem 0.8rem;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   align-self: flex-start;
 }
 .platform-callout svg { flex-shrink: 0; }
@@ -499,7 +482,7 @@ nav.scrolled {
   color: var(--text-3);
   border: 1px solid var(--border);
   padding: 0.3rem 0.8rem;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   margin-top: auto;
 }
 
@@ -571,12 +554,11 @@ nav.scrolled {
 
 .cta-glow {
   position: absolute;
-  width: 600px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255, 106, 77, 0.10) 0%, transparent 70%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--coral), var(--green));
   pointer-events: none;
 }
 
