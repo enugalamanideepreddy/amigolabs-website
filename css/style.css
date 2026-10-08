@@ -1,4 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/manrope-variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../assets/fonts/space-mono-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../assets/fonts/space-mono-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
 
 /* ── Tokens ──────────────────────────────────────────────────────────────── */
 :root {
@@ -16,7 +36,7 @@
   --border-accent: rgba(228, 24, 27, 0.30);
   --text-1:        #1B4F9C;
   --text-2:        #4A6690;
-  --text-3:        #8FA0BE;
+  --text-3:        #52627D;
   --font:          'Manrope', sans-serif;
   --mono:          'Space Mono', monospace;
   --radius-sm:     8px;
@@ -94,7 +114,7 @@ section { padding: 7rem 0; }
   font-weight: 700;
   cursor: pointer;
   border: none;
-  transition: all 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), color 0.25s var(--ease), background-color 0.25s var(--ease), border-color 0.25s var(--ease);
   white-space: nowrap;
 }
 
@@ -128,7 +148,7 @@ nav {
   z-index: 100;
   padding: 1.1rem 0;
   border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 nav.scrolled {
@@ -177,7 +197,10 @@ nav.scrolled {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 11px;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
 }
 .hamburger span {
   display: block;
@@ -185,7 +208,7 @@ nav.scrolled {
   height: 2px;
   background: var(--text-1);
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .mobile-menu {
@@ -539,7 +562,7 @@ nav.scrolled {
 }
 .value-icon svg { width: 22px; height: 22px; }
 
-.value-card h4 { color: var(--text-1); }
+.value-card .value-title { color: var(--text-1); }
 .value-card p  { font-size: 0.88rem; margin: 0; }
 
 /* ── CTA Banner ──────────────────────────────────────────────────────────── */
@@ -612,7 +635,7 @@ footer {
   align-items: center;
   justify-content: center;
   color: var(--text-2);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 .social-links a:hover {
   color: var(--coral);
@@ -631,7 +654,7 @@ footer {
   gap: 0.75rem;
 }
 
-.footer-col h5 {
+.footer-col .footer-title {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -659,13 +682,15 @@ footer {
 
 /* ── Animations ──────────────────────────────────────────────────────────── */
 .fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  opacity: 1;
+  transform: none;
 }
 .fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: reveal 0.45s var(--ease);
+}
+@keyframes reveal {
+  from { opacity: 0.75; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
 }
 
 /* stagger children */
@@ -701,3 +726,44 @@ footer {
 @media (max-width: 480px) {
   .hero-stats { display: none; }
 }
+
+/* Navigation and accessibility */
+html { scroll-padding-top: 96px; }
+section[id] { scroll-margin-top: 24px; }
+h1, h2 { text-wrap: balance; }
+a:focus-visible, button:focus-visible, main:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 5px;
+}
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  z-index: 200;
+  padding: 12px 18px;
+  background: var(--surface-1);
+  color: var(--ink);
+  border-radius: var(--radius-sm);
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: none; }
+@media (max-width: 700px) {
+  .hero { min-height: auto; padding: 120px 0 64px; }
+  .hero-content { gap: 1.25rem; }
+  section { padding: 4rem 0; }
+  .product-card-inner { padding: 1.5rem; }
+  .section-sub { margin-bottom: 2.5rem; }
+}
+@media (min-width: 701px) {
+  .mobile-menu.open { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .product-card:hover, .value-card:hover, .btn-primary:hover { transform: none; }
+}
+
+.value-title { font-size: 1.05rem; }

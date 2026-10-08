@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: "#"
+        - img "AmigoLabs" [ref=e6]
+      - generic [ref=e7]:
+        - link "Products" [ref=e8] [cursor=pointer]:
+          - /url: "#products"
+        - link "Mission" [ref=e9] [cursor=pointer]:
+          - /url: "#mission"
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - generic [ref=e13]: Building for India
+      - heading "Friendly software for real-world problems." [level=1] [ref=e14]: Friendly softwarefor real-world problems.
+      - paragraph [ref=e15]: AmigoLabs is a small studio building practical, human tools for everyday Indians — from your money to your home. Friendly first. Always.
+      - generic [ref=e16]:
+        - link "See our products" [ref=e17] [cursor=pointer]:
+          - /url: "#products"
+        - link "Our mission" [ref=e20] [cursor=pointer]:
+          - /url: "#mission"
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: "2"
+          - generic [ref=e24]: Products in build
+        - generic [ref=e26]:
+          - generic [ref=e27]: 100%
+          - generic [ref=e28]: Built for India
+        - generic [ref=e30]:
+          - generic [ref=e31]: "1"
+          - generic [ref=e32]: "Promise: be friendly"
+    - generic [ref=e34]:
+      - generic [ref=e35]: Products
+      - heading "Tools that make real life easier" [level=2] [ref=e36]
+      - paragraph [ref=e37]: Each product we ship starts with a real problem we've felt ourselves — and ends with a friendly, calm solution anyone can use.
+      - generic [ref=e38]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - img "FinAmigo" [ref=e43]
+            - generic [ref=e44]:
+              - generic [ref=e45]: Flagship
+              - generic [ref=e46]: Coming Soon
+          - heading "FinAmigo" [level=3] [ref=e48]
+          - paragraph [ref=e49]: A friendly money companion for everyday India. Import statements from 9+ banks, see where your money actually goes, and get gentle insights with the FinAmigo Score™ — all on your device, no judgement.
+          - generic [ref=e50]:
+            - generic [ref=e51]: Personal finance
+            - generic [ref=e52]: Android
+            - generic [ref=e53]: iOS
+            - generic [ref=e54]: macOS
+            - generic [ref=e55]: Windows
+          - link "Explore FinAmigo" [ref=e56] [cursor=pointer]:
+            - /url: https://finamigo.amigolabs.in
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - img "SpaceOS" [ref=e63]
+            - generic [ref=e64]:
+              - generic [ref=e65]: New
+              - generic [ref=e66]: In Beta
+          - heading "SpaceOS" [level=3] [ref=e68]
+          - paragraph [ref=e69]: The friendliest way to run your rentals — PGs, apartments, hostels and study halls. Track units, tenants, payments and reports in one calm dashboard, no spreadsheets needed.
+          - generic [ref=e70]:
+            - generic [ref=e71]: PG & co-living
+            - generic [ref=e72]: Apartments
+            - generic [ref=e73]: Hostels & study halls
+            - generic [ref=e74]: Web · Android · iOS
+          - generic [ref=e75]: Now available on Web — plus Android & iOS
+          - link "Explore SpaceOS" [ref=e78] [cursor=pointer]:
+            - /url: https://spaceos.amigolabs.in
+        - generic [ref=e82]:
+          - heading "More from AmigoLabs" [level=3] [ref=e86]
+          - paragraph [ref=e87]: We're always listening for the next everyday problem worth solving. If something annoys enough people we love, it's probably next on our list.
+          - generic [ref=e88]: In stealth
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]: Our mission
+        - heading "Solve real problems. Stay friendly while doing it." [level=2] [ref=e94]: Solve real problems.Stay friendly while doing it.
+        - paragraph [ref=e95]: Most software today either ignores how regular people actually live, or talks down to them while pretending to help. We think there's a better way.
+        - paragraph [ref=e96]: AmigoLabs builds the tools we wished existed for our families, friends and neighbours — practical software that solves a real, daily problem and feels like a helpful friend, not a complicated app.
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - heading "Friendly by default" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Calm interfaces, plain language, no jargon. If your grandma can't use it comfortably, we haven't shipped it yet.
+        - generic [ref=e105]:
+          - heading "Real problems first" [level=3] [ref=e110]
+          - paragraph [ref=e111]: We start every product with a problem we've personally felt — not a trend, not a deck. If it doesn't make life genuinely easier, we don't build it.
+        - generic [ref=e112]:
+          - heading "India first" [level=3] [ref=e117]
+          - paragraph [ref=e118]: Designed for Indian banks, Indian rentals, Indian habits — never an adapted Western product pretending to fit.
+        - generic [ref=e119]:
+          - heading "Respect your data" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Only what's needed, nothing more. We treat your data the way we'd want ours treated — carefully, and never as a product.
+    - generic [ref=e126]:
+      - heading "Pick your amigo." [level=2] [ref=e127]
+      - paragraph [ref=e128]: FinAmigo helps your money behave. SpaceOS helps your rentals — PG, apartment, hostel or study hall — run themselves. Both are designed to feel like a friend who finally gets it.
+      - generic [ref=e129]:
+        - link "Explore FinAmigo" [ref=e130] [cursor=pointer]:
+          - /url: https://finamigo.amigolabs.in
+        - link "Explore SpaceOS" [ref=e133] [cursor=pointer]:
+          - /url: https://spaceos.amigolabs.in
+  - contentinfo [ref=e136]:
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - img "AmigoLabs" [ref=e141]
+          - paragraph [ref=e142]: Friendly software for real-world problems.
+          - link "Instagram" [ref=e144] [cursor=pointer]:
+            - /url: https://instagram.com/finamigox
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - heading "Products" [level=2] [ref=e150]
+            - link "FinAmigo" [ref=e151] [cursor=pointer]:
+              - /url: https://finamigo.amigolabs.in
+            - link "SpaceOS" [ref=e152] [cursor=pointer]:
+              - /url: https://spaceos.amigolabs.in
+          - generic [ref=e153]:
+            - heading "Company" [level=2] [ref=e154]
+            - link "Mission" [ref=e155] [cursor=pointer]:
+              - /url: "#mission"
+            - link "Contact AmigoLabs" [ref=e156] [cursor=pointer]:
+              - /url: mailto:admin@amigolabs.in
+          - generic [ref=e157]:
+            - heading "Legal" [level=2] [ref=e158]
+            - link "Privacy Policy" [ref=e159] [cursor=pointer]:
+              - /url: https://finamigo.amigolabs.in/privacy.html
+            - link "Terms of Service" [ref=e160] [cursor=pointer]:
+              - /url: https://finamigo.amigolabs.in/terms.html
+      - generic [ref=e161]:
+        - generic [ref=e162]: © 2026 AmigoLabs. All rights reserved.
+        - generic [ref=e163]: Made with care in India 🇮🇳
